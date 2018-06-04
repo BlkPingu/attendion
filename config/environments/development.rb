@@ -26,6 +26,20 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # watch your queries while you develop your application and notify you
+  # when you should add eager loading (N+1 queries),
+  # when you use eager loading that is not necessary - and
+  # when you should use counter caching
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.bullet_logger = true
+    Bullet.console = true
+    # Bullet.growl = true
+    Bullet.rails_logger = true
+    Bullet.add_footer = true
+  end
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
