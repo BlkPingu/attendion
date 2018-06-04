@@ -21,3 +21,16 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore Spring files
+/spring/*.pid
+
+# Ignore tmp file uploads
+public/uploads
+
+# Ignore dev env vars
+.env
+
+.idea/
+/*.iml
+coverage
