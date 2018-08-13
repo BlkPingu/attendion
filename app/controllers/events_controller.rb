@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+
+  http_basic_authenticate_with name: "admin", password: "secret", only: :destroy
+
   def create
     @user = User.find(params[:user_id])
     @event = @user.events.create(event_params)
