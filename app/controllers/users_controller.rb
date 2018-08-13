@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show]
-
   def index
     @users = User.all
   end
@@ -21,7 +19,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user
+      flash[:success] = "Welcome at Attendion!"
+      redirect_to root_path
     else
       render 'new'
     end
