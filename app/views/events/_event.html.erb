@@ -27,3 +27,9 @@
   <strong>Description:</strong>
   <%= event.description %>
 </p>
+
+<p>
+  <%= link_to 'Destroy Event', [event.user, event],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>
