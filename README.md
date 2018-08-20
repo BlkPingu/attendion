@@ -1,17 +1,17 @@
 # README
 
 
-* Ruby version: 
+* **Ruby version:** 
 
 ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin17]
 
-* Rails version:
+* **Rails version:**
 
 Rails 5.1.6
 
-* Database creation:
+* **Database creation:**
 
-- If you're getting the Error 
+- If you're getting the Error: 
 
 > Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.” after cloning and migrating the project
 
@@ -24,7 +24,7 @@ rm -f db/*.sqlite3
       rails s -e development
 ```
 
-* Deployment instructions: 
+* **Deployment instructions:** 
 
 Deployed on Heroku: https://attendion.herokuapp.com/
 
