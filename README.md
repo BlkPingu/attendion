@@ -11,7 +11,7 @@ Rails 5.1.6
 
 * **Database creation:**
 
-If you're getting the Error: 
+If you're getting [this Error](https://stackoverflow.com/questions/21309901/getting-migrations-are-pending-run-bin-rake-dbmigrate-rails-env-development): 
 
 > Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.” after cloning and migrating the project
 
