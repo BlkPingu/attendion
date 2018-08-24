@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180820142838) do
+ActiveRecord::Schema.define(version: 20180824145316) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20180820142838) do
     t.string "last_login_ip"
     t.string "perishable_token"
     t.string "aboutme"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
