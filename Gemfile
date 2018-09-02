@@ -5,17 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.4.1'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-gem 'pg', group: :production # Added postgres and made it production only.
-gem 'rails_12factor'
 
 
 # Specifying an exact Ruby version
-
+ruby '2.4.1'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -40,8 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+
   # Step-by-step debugging and stack navigation in Pry
   gem 'pry-byebug', platform: :ruby
   # Pry is a powerful alternative to the standard IRB shell for Ruby
@@ -91,7 +85,7 @@ group :development do
   # IYE makes it easy to translate your Rails I18N files and keeps them up to date
   gem 'iye', require: false
   # Image Uploader Carrierwave for all kinds of Picture related jobs
-  gem 'carrierwave', '~> 1.0'
+
 
 
 
@@ -115,3 +109,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', group: :development # Added development group.
+gem 'pg', group: :production # Added postgres and made it production only.
+gem 'rails_12factor'
+
+gem 'carrierwave', '~> 1.0'
