@@ -109,6 +109,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'sqlite3', group: :development # Added development group.
-gem 'pg', group: :production # Added postgres and made it production only.
+group :production, :staging do
+  gem "pg"
+end
+
+group :development, :test do
+  gem "sqlite3"
+end
 gem 'rails_12factor'
