@@ -14,7 +14,8 @@ test:
 
 production:
   adapter: postgresql
-  database: production
+  username: root
+  password:
+  database: example
   host: localhost
-  pool: 5
-  timeout: 5000
+
