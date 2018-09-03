@@ -82,6 +82,9 @@ group :development do
   gem 'i18n-tasks', require: false
   # IYE makes it easy to translate your Rails I18N files and keeps them up to date
   gem 'iye', require: false
+  # Image Uploader Carrierwave for all kinds of Picture related jobs
+  gem 'carrierwave', '~> 1.0'
+
 end
 
 group :test do

@@ -1,29 +1,29 @@
-<%= form_with(model: [ @user, @user.events.build ], local: true) do |form| %>
+<%= form_with(model: [ @user, @user.events.build ], local: true) do |f| %>
   <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
   </p>
   <p>
-    <%= form.label :date %><br>
-    <%= form.date_field :date %>
+    <%= f.label :date %><br>
+    <%= f.date_field :date %>
   </p>
   <p>
-    <%= form.label :time %><br>
-    <%= form.time_select :time %>
+    <%= f.label :time %><br>
+    <%= f.time_select :time %>
   </p>
   <p>
-    <%= form.label :location %><br>
-    <%= form.text_field :location %>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
   </p>
   <p>
-    <%= form.label :url %><br>
-    <%= form.text_field :url %>
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
   </p>
   <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= f.submit %>
   </p>
 <% end %>

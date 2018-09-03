@@ -1,3 +1,7 @@
+<%= image_tag @user.avatar.url if @user.avatar? %>
+
+
+
 <p>
   <strong>User Name:</strong>
   <%= @user.name %>
@@ -6,6 +10,11 @@
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
+</p>
+
+<p>
+  <strong>About me:</strong>
+  <%= @user.aboutme %>
 </p>
 
 <h2>Events</h2>
