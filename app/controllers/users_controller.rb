@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-
-  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show]
+  extend Devise::Models
 
   def index
     @users = User.all
