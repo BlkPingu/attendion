@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# user authentication
+gem 'devise'
 
 group :development, :test do
 
@@ -115,3 +117,5 @@ gem 'pg', group: :production # Added postgres and made it production only.
 gem 'rails_12factor'
 
 gem 'carrierwave', '~> 1.0'
+
+gem 'bootstrap-sass'

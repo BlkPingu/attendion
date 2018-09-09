@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  devise_for :users
+  get 'welcome/home'
 
   resources :users do
     resources :events
   end
 
-  root 'welcome#index'
+  root 'welcome#home'
 end
