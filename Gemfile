@@ -117,3 +117,5 @@ gem 'pg', group: :production # Added postgres and made it production only.
 gem 'rails_12factor'
 
 gem 'carrierwave', '~> 1.0'
+
+gem 'bootstrap-sass'
