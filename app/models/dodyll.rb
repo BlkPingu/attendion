@@ -1,0 +1,2 @@
+class Dodyll < ApplicationRecord
+end
