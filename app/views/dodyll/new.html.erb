@@ -1,0 +1,21 @@
+<h1>Create a new Dodyll!</h1>
+
+<%= form_tag :action => 'create' do %>
+  <p><label for = "dodyll_title">Title</label>:
+    <%= text_field 'dodylls', 'title' %></p>
+
+  <p><label for = "dodyll_description">Description</label><br/>
+    <%= text_area 'dodylls', 'description' %></p>
+
+  <p><label for = "dodyll_location">Location</label>:
+    <%= text_field 'dodylls', 'location' %></p>
+
+  <p><label for = "dodyll_start">Between...</label>:
+    <%= date_field 'dodylls', 'start' %></p>
+
+  <p><label for = "dodyll_end">...and</label>:
+    <%= date_field 'dodylls', 'end' %></p>
+
+  <%= submit_tag "Create" %>
+
+<% end -%>
