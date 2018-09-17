@@ -1,4 +1,8 @@
 class DodyllController < ApplicationController
+  def list
+    @dodyll = Dodyll.all
+  end
+
   def show
     @dodyll = Dodyll.find(params[:id])
   end
@@ -11,7 +15,7 @@ class DodyllController < ApplicationController
     @dodyll = Dodyll.new(dodyll_params)
 
     if @dodyll.save
-      redirect_to :action => 'show'
+      redirect_to :action => 'list'
     else
       render 'new'
     end

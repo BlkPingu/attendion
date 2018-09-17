@@ -1,0 +1,14 @@
+<h1><%= @dodyll.title %></h1>
+
+<p>
+  <% if @dodyll.description.present? %>
+    <strong>Description: </strong> <%= @dodyll.description %><br />
+  <% if @dodyll.location.present? %>
+    <strong>Location:</strong> <%= @dodyll.location %><br />
+
+  <strong>Created Date:</strong> <%= @dodyll.created_at %><br />
+
+   <% @dodyll.start.upto(@dodyll.end) do |date| %>
+     date
+   <% end %>
+</p>
