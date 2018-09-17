@@ -2,7 +2,6 @@
   <p>You don't have any Dodylls.</p>
 <% else %>
   <p>These are the current Dodylls</p>
-
   <ul id = "dodylls">
     <% @dodylls.each do |c| %>
       <li><%= link_to c.title, {:action => 'show', :id => c.id} -%></li>
