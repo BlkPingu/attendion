@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180904122252) do
+ActiveRecord::Schema.define(version: 20180917133452) do
+
+  create_table "dodylls", force: :cascade do |t|
+    t.string "title", limit: 32, null: false
+    t.text "description"
+    t.string "location"
+    t.date "start", null: false
+    t.date "end", null: false
+    t.datetime "created_at"
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "title"
