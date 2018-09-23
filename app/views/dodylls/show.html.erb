@@ -1,13 +1,10 @@
 <h1><%= @dodyll.title %></h1>
 
 <p>
-  <% if @dodyll.description.present? %>
-    <strong>Description: </strong> <%= @dodyll.description %><br />
-  <% if @dodyll.location.present? %>
-    <strong>Location:</strong> <%= @dodyll.location %><br />
-
-
-   <% @dodyll.start.upto(@dodyll.end) do |date| %>
-     date
-   <% end %>
+  <strong>Description: </strong> <%= @dodyll.description %><br />
+  <strong>Location:</strong> <%= @dodyll.location %><br />
+  <% @dodyll.start.upto(@dodyll.end) do |date| %>
+    <%= date %>
+  <% end %>
 </p>
+

@@ -1,6 +1,6 @@
 <h1>Create a new Dodyll!</h1>
 
-<%= form_with scope: :dodylls, local: true do |f| %>
+<%= form_with scope: :dodylls, url: dodylls_path, local: true do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
