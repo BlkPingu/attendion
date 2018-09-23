@@ -14,7 +14,13 @@
   <% end %>
   </tr>
 
-  <tr> <td>Name</td>
+  <tr> <td>
+    <% if user_signed_in? %>
+      <%= current_user.name %>
+    <% else %>
+      Anon
+    <% end %>
+    </td>
     <% @dodyll.start.upto(@dodyll.end) do |date| %>
       <td> Checkbox </td>
     <% end %>
