@@ -8,24 +8,27 @@
     <strong>Location:</strong> <%= @dodyll.location %><br />
   <% end %>
   <table>
-  <tr> <th>User</th>
+  <tr> <th></th>
   <% @dodyll.start.upto(@dodyll.end) do |date| %>
   <th> <%= date %> </th>
   <% end %>
   </tr>
-
+    <%= form_with(model: [ @dodyll, @dodyll.votes.build ], local: true) do |f| %>
   <tr> <td>
-    <% if user_signed_in? %>
-      <%= current_user.name %>
-    <% else %>
-      Anon
-    <% end %>
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
     </td>
     <% @dodyll.start.upto(@dodyll.end) do |date| %>
-      <td> Checkbox </td>
+      <td>
+        <%= hidden_field_tag "vote" %>
+        <%= check_box_tag "vote", true %></td>
     <% end %>
   </tr>
   </table>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
 </p>
 
   <%= link_to 'Back', dodylls_path %>
