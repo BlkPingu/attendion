@@ -1,6 +1,21 @@
 <h1>Create a new Dodyll!</h1>
 
 <%= form_with scope: :dodylls, url: dodylls_path, local: true do |f| %>
+
+  <% if @dodyll.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@dodyll.errors.count, "error") %> prohibited
+        this dodyll from being saved:
+      </h2>
+      <ul>
+        <% @dodyll.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
