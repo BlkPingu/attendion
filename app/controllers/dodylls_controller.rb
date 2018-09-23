@@ -1,5 +1,5 @@
-class DodyllController < ApplicationController
-  def list
+class DodyllsController < ApplicationController
+  def index
     @dodyll = Dodyll.all
   end
 
@@ -13,9 +13,8 @@ class DodyllController < ApplicationController
 
   def create
     @dodyll = Dodyll.new(dodyll_params)
-
     if @dodyll.save
-      redirect_to :action => 'list'
+      redirect_to @dodyll
     else
       render 'new'
     end
@@ -27,10 +26,10 @@ class DodyllController < ApplicationController
 
   def update
     @dodyll = Dodyll.find(params[:id])
-    if @dodyll.update_attributes(dodyll_param)
-      redirect_to :action => 'show', :id => @dodyll
+    if @dodyll.update(dodyll_param)
+      redirect_to @dodyll
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 

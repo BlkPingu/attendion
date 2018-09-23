@@ -1,0 +1,32 @@
+<h1>Create a new Dodyll!</h1>
+
+<%= form_with scope: :dodylls, local: true do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.label :start %><br>
+    <%= f.date_field :start %>
+  </p>
+
+  <p>
+    <%= f.label :end %><br>
+    <%= f.date_field :end %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
