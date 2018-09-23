@@ -1,12 +1,16 @@
-<% if @dodylls.blank? %>
-  <p>You don't have any Dodylls.</p>
-<% else %>
-  <p>These are the current Dodylls</p>
-  <ul id = "dodylls">
-    <% @dodylls.each do |c| %>
-      <td><%= link_to 'Show', dodyll_path(dodyll) %></td>
-    <% end %>
-  </ul>
+<h1>All Dodylls</h1>
 
-<% end %>
+<table>
+  <tr>
+    <th>Description</th>
+  </tr>
+
+  <% @dodyll.each do |dodyll| %>
+    <tr>
+      <td><%= dodyll.title %></td>
+      <td><%= link_to 'Show', dodyll_path(dodyll) %></td>
+    </tr>
+  <% end %>
+</table>
+
 <p><%= link_to "Create new Dodyll", {:action => 'new' }%></p>

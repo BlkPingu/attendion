@@ -7,7 +7,17 @@
   <% if @dodyll.location.present? %>
     <strong>Location:</strong> <%= @dodyll.location %><br />
   <% end %>
+  <table>
+  <tr> <th>User</th>
   <% @dodyll.start.upto(@dodyll.end) do |date| %>
-    <%= date %>
+  <th> <%= date %> </th>
   <% end %>
+  </tr>
+
+  <tr> <th>Name</th>
+    <% @dodyll.start.upto(@dodyll.end) do |date| %>
+      <th> Checkbox </th>
+    <% end %>
+  </tr>
+  </table>
 </p>
