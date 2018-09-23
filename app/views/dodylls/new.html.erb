@@ -1,49 +1,5 @@
 <h1>Create a new Dodyll!</h1>
 
-<%= form_with scope: :dodylls, url: dodylls_path, local: true do |f| %>
-
-  <% if @dodyll.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@dodyll.errors.count, "error") %> prohibited
-        this dodyll from being saved:
-      </h2>
-      <ul>
-        <% @dodyll.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
-
-  <p>
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </p>
-
-  <p>
-    <%= f.label :start %><br>
-    <%= f.date_field :start %>
-  </p>
-
-  <p>
-    <%= f.label :end %><br>
-    <%= f.date_field :end %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Back', dodylls_path %>
