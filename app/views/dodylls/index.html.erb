@@ -9,6 +9,9 @@
     <tr>
       <td><%= dodyll.title %></td>
       <td><%= link_to 'Show', dodyll_path(dodyll) %></td>
+      <td><%= link_to 'Destroy', dodyll_path(dodyll),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

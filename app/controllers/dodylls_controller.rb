@@ -33,9 +33,11 @@ class DodyllsController < ApplicationController
     end
   end
 
-  def delete
-    Dodyll.find(params[:id]).destroy
-    redirect_to @user
+  def destroy
+    @dodyll = Dodyll.find(params[:id])
+    @dodyll.destroy
+
+    redirect_to dodylls_path
   end
 
   private
