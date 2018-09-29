@@ -23,3 +23,6 @@ end
 
 def all
 end
+
+def events
+end

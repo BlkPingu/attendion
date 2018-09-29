@@ -3,3 +3,18 @@
 <h1> All events here </h1>
 
 <p>here will all the events go</p>
+
+
+<% Event.all.each do |e| %>
+
+    <p>
+      <strong>Title:</strong>
+      <%= e.title %>
+    </p>
+
+    <p>
+      <b>When?</b> <%= e.time %>
+      <b>Where?</b> <%= e.date %>
+    </p>
+
+<% end %>
