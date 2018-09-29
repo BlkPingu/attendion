@@ -2,21 +2,30 @@
 
 <h1>All events</h1>
 
-<p></p>
 
 
-<% Event.all.each do |e| %>
 
-    <p>
-      <strong>Title:</strong>
-      <%= e.title %>
-    </p>
 
-    <p>
-      <b>When?</b> <%= e.time %>
-      <b>Where?</b> <%= e.date %>
-    </p>
+    <table width="100%">
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Where</th>
+        <th>Admin</th>
+      </tr>
 
-    <p>_______________</p>
+      <% Event.all.each do |e| %>
 
-<% end %>
+      <tr>
+        <td><%= e.title %></td>
+        <td><%= e.date %></td>
+        <td><%= e.time %></td>
+        <td><%= e.location %></td>
+        <td><%= e.user.name %></td>
+      </tr>
+
+
+      <% end %>
+    </table>
+
