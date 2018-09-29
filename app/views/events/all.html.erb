@@ -1,8 +1,8 @@
 
 
-<h1> All events here </h1>
+<h1>All events</h1>
 
-<p>here will all the events go</p>
+<p></p>
 
 
 <% Event.all.each do |e| %>
@@ -16,5 +16,7 @@
       <b>When?</b> <%= e.time %>
       <b>Where?</b> <%= e.date %>
     </p>
+
+    <p>_______________</p>
 
 <% end %>
