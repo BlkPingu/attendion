@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'welcome/home'
-  get 'events/all'
+  get 'events/all', as: :events_all
   get 'users/index'
 
   resources :users do
@@ -14,5 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :events do get :join
+  end
   root 'welcome#home'
 end

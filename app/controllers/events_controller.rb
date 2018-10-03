@@ -15,25 +15,31 @@ class EventsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def join
+    @event = Event.find(params[:id])
+    @attending_event = current_user.attending_events.new(event: @event)
+    if @attending_event.save
+      redirect_to events_all_path
+    else
+      redirect_to events_all_path
+
+    end
+  end
+
+  def all
+  end
+
+  def events
+  end
+
   private
   def event_params
     params.require(:event).permit(:title, :date, :time, :location, :url, :description,)
   end
-end
 
-def all
-end
 
-def events
 end
 
 
-def join
-  @event = Event.find(params[:id])
-  @attending_event = current_user.attending_events.new(event: @event)
-  if @attending_event.save
-    #do something
-  else
-    #do something else
-  end
-end
+
+
