@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :events do
-    users do
+    member do
       get :join
     end
   end
