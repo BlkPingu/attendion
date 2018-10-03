@@ -21,8 +21,12 @@ class EventsController < ApplicationController
   end
 end
 
-def all
+def join
+  @user = User.find(params[:user_id])
+  @event = Event.find(params[:event_id])
+end
 
+def all
 end
 
 def events

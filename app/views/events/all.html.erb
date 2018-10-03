@@ -13,6 +13,7 @@
         <th>Time</th>
         <th>Where</th>
         <th>Admin</th>
+        <th></th>
       </tr>
 
       <% Event.all.each do |e| %>
@@ -23,6 +24,7 @@
         <td><%= e.time %></td>
         <td><%= e.location %></td>
         <td><%= e.user.name %></td>
+        <td><%= submit_tag "join event" %></td>
       </tr>
 
 
