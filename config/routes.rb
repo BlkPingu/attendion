@@ -8,5 +8,11 @@ Rails.application.routes.draw do
     resources :events
   end
 
+  resources :events do
+    users do
+      get :join
+    end
+  end
+
   root 'welcome#home'
 end

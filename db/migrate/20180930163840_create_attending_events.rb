@@ -13,6 +13,6 @@ class CreateAttendingEvents < ActiveRecord::Migration[5.1]
 
     add_index :attending_events, :event_id
     add_index :attending_events, :user_id
-    add_index :attending_events, [:event_id, :user_id]
+    add_index :attending_events, [:event_id, :user_id], unique: true
   end
 end

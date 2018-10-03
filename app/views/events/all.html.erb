@@ -3,6 +3,7 @@
 <h1>All events</h1>
 
 
+<p>Number of events joined: </p><% AttendingEvent.all.count %>
 
 
 
@@ -24,7 +25,7 @@
         <td><%= e.time %></td>
         <td><%= e.location %></td>
         <td><%= e.user.name %></td>
-        <td><%= submit_tag "join event" %></td>
+        <td><%= button_to "join event", join_event_path(e), method: :get %></td>
       </tr>
 
 

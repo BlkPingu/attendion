@@ -21,13 +21,19 @@ class EventsController < ApplicationController
   end
 end
 
-def join
-  @user = User.find(params[:user_id])
-  @event = Event.find(params[:event_id])
-end
-
 def all
 end
 
 def events
+end
+
+
+def join
+  @event = Event.find(params[:id])
+  @attending_event = current_user.attending_events.new(event: @event)
+  if @attending_event.save
+    #do something
+  else
+    #do something else
+  end
 end
