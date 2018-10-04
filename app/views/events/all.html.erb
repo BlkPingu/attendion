@@ -13,6 +13,7 @@
         <th>Time</th>
         <th>Where</th>
         <th>Admin</th>
+        <th></th>
       </tr>
 
       <% Event.all.each do |e| %>
@@ -23,9 +24,29 @@
         <td><%= e.time %></td>
         <td><%= e.location %></td>
         <td><%= e.user.name %></td>
+        <td><%= button_to "join event", join_event_path(e), method: :get %></td>
       </tr>
 
 
       <% end %>
     </table>
 
+<h2>Joined events</h2>
+
+    <table width="100%">
+    <tr>
+      <th>id</th>
+      <th>(not yet functional)</th>
+
+    </tr>
+
+    <% AttendingEvent.all.each do |e| %>
+
+
+    <tr>
+      <td><%= e.id %></td>
+      <td><%= button_to "leave"%></td>
+
+    <% end %>
+
+</table>
