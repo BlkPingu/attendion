@@ -1,16 +1,13 @@
 <h1>All Attendion Members</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-  </tr>
-
   <% @users.each do |user| %>
-    <tr>
-      <td><%= user.name %></td>
-      <td><%= user.email %></td>
-      <td><%= link_to 'Show', user_path(user) %></td>
-    </tr>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag user.avatar.url, width: '10%' if user.avatar.present?%>
+        <div class="col-md-4">
+      <%= user.name %>
+      <%= user.email %>
+      <%= link_to 'Show', user_path(user), :class => 'navbar-link' %>
+
+        </div></div></div>
   <% end %>
-</table>

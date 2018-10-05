@@ -16,7 +16,7 @@
 
   <div class="field">
     <%= f.label :avatar %></br>
-    <%= f.file_field :avatar %>
+    <%= f.file_field :avatar, :class => "button_with_image_save" %>
   </div>
 
   <div class="field">
@@ -56,4 +56,4 @@
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back, :class => 'navbar-link' %>
