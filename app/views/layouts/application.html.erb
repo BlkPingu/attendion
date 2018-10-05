@@ -23,11 +23,10 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><%= link_to 'Users', controller: 'users' %></li>
+         <li><%= link_to 'Users', controller: 'users' %></li>
           <li><%= link_to 'Events', events_all_path %></li>
           <li><%= link_to 'Dodyll', controller: 'dodylls' %></li>
         </ul>
-      </div>
     </div>
     <p class="navbar-text pull-right">
       <% if user_signed_in? %>
