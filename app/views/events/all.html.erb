@@ -28,23 +28,3 @@
 
       <% end %>
     </table>
-
-<h2>Joined events</h2>
-
-    <table width="100%">
-    <tr>
-      <th>id</th>
-      <th>(not yet functional)</th>
-
-    </tr>
-
-    <% AttendingEvent.all.each do |e| %>
-
-
-    <tr>
-      <td><%= e.id %></td>
-      <td width="30%"><%= button_to "leave"%></td>
-
-    <% end %>
-
-</table>
