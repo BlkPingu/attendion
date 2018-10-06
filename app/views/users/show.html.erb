@@ -18,6 +18,7 @@
 <div class="col-md-9">
   <% if @user == current_user %>
 <h2>Events you've joined</h2>
+    <% if AttendingEvent.any %>
   <% AttendingEvent.all.each do |e| %>
    <div class="row">
      <div class="col-md-9">
@@ -27,7 +28,7 @@
        <%= e.event.date %>
      </div>
    </div>
-  <% end %>
+  <% end %> <% end %>
     <% end %>
 <div class="col-md-9">
   <h4><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h4>
