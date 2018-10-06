@@ -119,3 +119,4 @@ gem 'rails_12factor'
 gem 'carrierwave', '~> 1.0'
 
 gem 'bootstrap-sass'
+gem 'table_print'
