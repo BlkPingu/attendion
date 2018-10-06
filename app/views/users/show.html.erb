@@ -4,15 +4,11 @@
   <div class="col-md-6">
 <%= image_tag @user.avatar.url if @user.avatar? %>
 </div>
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
 
 <p>
-  <strong>About me:</strong>
   <%= @user.aboutme %>
 </p>
+
   </div>
   <div class="col-md-9">
 <h2>Events</h2>
