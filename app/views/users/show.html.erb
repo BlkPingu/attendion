@@ -4,24 +4,37 @@
   <div class="col-md-6">
 <%= image_tag @user.avatar.url if @user.avatar? %>
 </div>
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
 
 <p>
-  <strong>About me:</strong>
   <%= @user.aboutme %>
 </p>
+
   </div>
   <div class="col-md-9">
 <h2>Events</h2>
 <%= render @user.events %>
-
-<h3>Create new event:</h3>
-<%= render 'events/form' %>
   </div>
+
+<div class="col-md-9">
+  <% if @user == current_user %>
+<h2>Events you've joined</h2>
+  <% AttendingEvent.all.each do |e| %>
+   <div class="row">
+     <div class="col-md-9">
+       <strong><%= e.event.title %></strong>
+     </div>
+     <div class="col-md-9">
+       <%= e.event.date %>
+     </div>
+   </div>
+  <% end %>
+    <% end %>
+<div class="col-md-9">
+  <h4><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h4>
 </div>
 
-<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+
+
+<% if @user == current_user %>
+<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> | <% end %>
 <%= link_to 'Back', users_path, :class => 'navbar-link' %>
