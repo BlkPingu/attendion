@@ -1,29 +1,45 @@
 <%= form_with(model: [ @user, @user.events.build ], local: true) do |f| %>
-  <p>
-    <%= f.label :title %><br>
+  <div class="form-group">
+  <div class="col-md-8">
+    <%= f.label :title %>
+    <div class="col-md-8">
     <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :date %><br>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <%= f.label :date %>
+    <div class="col-md-8">
     <%= f.date_field :date %>
-  </p>
-  <p>
-    <%= f.label :time %><br>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <%= f.label :time %>
+    <div class="col-md-8">
     <%= f.time_select :time %>
-  </p>
-  <p>
-    <%= f.label :location %><br>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <%= f.label :location %>
+    <div class="col-md-8">
     <%= f.text_field :location %>
-  </p>
-  <p>
-    <%= f.label :url %><br>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <%= f.label :url %>
+    <div class="col-md-8">
     <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.label :description %><br>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <%= f.label :description %>
+    <div class="col-md-8">
     <%= f.text_area :description %>
-  </p>
-  <p>
+    </div>
+  </div>
+    <div class="col-md-8">
+      <p></p>
+    <div class="col-md-8">
     <%= f.submit %>
-  </p>
+    </div></div>
+  </div>
 <% end %>

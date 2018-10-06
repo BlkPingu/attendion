@@ -17,7 +17,191 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$mint: #16e78a;
+$gray: #3c3d35;
+$pink: #ffbbbc;
 
-body {
-  padding-top: 100px;
+html, body {
+  padding-top: 50px;
+  background-image: url('/assets/white_brick_wall.png');
+  /* Background pattern from Toptal Subtle Patterns */
+  width: 100%;
+  height: auto;
+  font-color: $gray;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-kerning: normal;
+  color: $mint;
+  text-shadow: 2px 2px $pink;
+  text-align: left;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.3em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  padding-left: 4%;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  font-color: $gray !important;
+}
+
+body .navbar-link {
+  color: $mint;
+}
+
+body .navbar-link:hover, .navbar-link:focus {
+    color: $pink;
+    text-decoration: none;
+}
+
+.navbar-default {
+  background-color: $gray;
+  background-image: none;
+  border-color: $mint;
+}
+
+.navbar-default .navbar-brand > h1 {
+  color: $mint;
+}
+
+.navbar-default .navbar-brand {
+  color: $pink;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: $pink;
+}
+.navbar-default .navbar-text {
+  color: $mint;
+}
+.navbar-default .navbar-nav > li > a {
+  color: $mint;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: $pink;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: $mint;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: $pink;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: $pink;
+  background-color: $mint;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: $mint;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: $mint;
+  background-color: $mint;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: $mint;
+  background-color: $mint;
+}
+.navbar-default .navbar-toggle {
+  border-color: $mint;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: $mint;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $mint;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: $mint;
+}
+.navbar-default .navbar-link {
+  color: $mint;
+  text-decoration: none;
+}
+.navbar-default .navbar-link:hover {
+  color: $pink;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: $mint;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: $pink;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: $mint;
+    background-color: $mint;
+  }
+}
+
+.container input[type="submit"], .button_with_image_save {
+  height: 30px;
+  font-size: 13px;
+  background-color: $gray;
+  border: none;
+  color: $pink;
+
+}
+
+div .col-md-8 {
+  color: $gray;
+}
+
+div .form-group {
+  color: $gray;
+  width: 80%;
+}
+
+input, textarea, select {
+  color: $mint;
+  background-color: $gray;
+}
+
+input, textarea {
+  width: 100%;
+}
+
+select {
+  width: 47%;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 80%;
+  max-height: 80%;
 }
