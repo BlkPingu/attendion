@@ -1,16 +1,17 @@
 <h1>Attendion</h1>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Attendion</title>
-  <%= csrf_meta_tags %>
+<div>
+Welcome to Attendion, your prefered site for creating and joining events with your friends.
+<% if user_signed_in? %>
+    <% if current_user.name.present?%>
+      How are you today<%= ', '+ current_user.name %>?
+    <% else %>
+      To make it easier for everyone, why don't you start and add your name to your profile?
+    <% end %>
+  <% end %>
+</div>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track'=> 'reload' %>
-</head>
 
-<body>
 <p class="navbar-text pull-right">
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.
@@ -29,5 +30,3 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 <%= yield %>
-</body>
-</html>

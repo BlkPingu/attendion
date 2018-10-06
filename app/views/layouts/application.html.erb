@@ -23,30 +23,34 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
+          <% if user_signed_in? %>
           <li><%= link_to 'Users', users_index_path %></li>
           <li><%= link_to 'Events', events_all_path %></li>
-          <%= render 'layouts/navigation' %>
 
+                
+          <%= render 'layouts/navigation' %>
+          <li><%= link_to 'New Event', new_event_path %></li>
+          <li><%= link_to 'My Profile', user_path(current_user) %></li>
+            <% else %>
+            <li><%= link_to 'Sign up', new_user_registration_path %></li>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+            <% end %>
+          <li><%= link_to 'Help', static_pages_help_path %></li>
+          <li><%= link_to 'Impressum', static_pages_impressum_path %></li>
+          <li><%= link_to 'Privacy', static_pages_privacy_path %></li>
         </ul>
       </div>
     </div>
     <p class="navbar-text pull-right">
       <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.email %></strong>.
-        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-      <% else %>
-        <%= link_to 'Sign up', new_user_registration_path, :class => 'navbar-link'  %> |
-        <%= link_to 'Login', new_user_session_path, :class => 'navbar-link'  %>
+        <%if current_user.name.present? %>
+        Logged in as <strong><%= current_user.name %></strong> |
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          <% else %>
+          Logged in as <strong><%= current_user.email %></strong>.
       <% end %>
+        <% end %>
     </p>
-
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
   </nav>
     <div class="container">
     <%= yield %>
