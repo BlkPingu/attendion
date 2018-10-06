@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'static_pages/help'
+
+  get 'static_pages/privacy'
+
+  get 'static_pages/impressum'
+
   devise_for :users
   get 'welcome/home'
   get 'events/all', as: :events_all
