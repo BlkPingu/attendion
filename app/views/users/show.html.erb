@@ -20,11 +20,19 @@
   </div>
 
 <div class="col-md-9">
-<h2>Joined events</h2>
+  <% if @user == current_user %>
+<h2>Events you've joined</h2>
   <% AttendingEvent.all.each do |e| %>
-    <div class="row"><div class="col-md-9"><%= e.event.title %>
-    </div></div>
+   <div class="row">
+     <div class="col-md-9">
+       <strong><%= e.event.title %></strong>
+     </div>
+     <div class="col-md-9">
+       <%= e.event.date %>
+     </div>
+   </div>
   <% end %>
+    <% end %>
 <div class="col-md-9">
   <h4><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h4>
 </div>
