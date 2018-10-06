@@ -1,2 +1,14 @@
 de:
-  hello: "Hallo Welt"
+  events:
+    event:
+      title: "Titel"
+      date: "Datum"
+      time: "Uhrzeit"
+      location: "Ort"
+      URL: "URL"
+      description: "Beschreibung"
+    form:
+    all:
+    join:
+    new:
+  message: "Test"

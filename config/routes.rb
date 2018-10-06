@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
 
-  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+  scope "(:locale)", locale: /en|de/ do
 
-  get 'static_pages/help'
+    root 'welcome#home'
 
-  get 'static_pages/privacy'
+    get 'static_pages/help'
+    get 'static_pages/privacy'
+    get 'static_pages/impressum'
 
-  get 'static_pages/impressum'
-
-  devise_for :users
-  get 'welcome/home'
-  get 'events/all', as: :events_all
-  get 'users/index'
+    devise_for :users
+    get 'welcome/home'
+    get 'events/all', as: :events_all
+    get 'users/index'
 
     resources :users do
       resources :events
@@ -23,8 +23,8 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :events do get :join
+    resources :events do
+      get :join
     end
-    root 'welcome#home'
   end
 end

@@ -1,5 +1,3 @@
-<li><%= link_to t(:users), users_path %></li>
-
 <%= content_tag :li do %>
     <%= link_to 'English', locale: :en %>
 <% end unless current_page?(locale: :en) %>
@@ -7,3 +5,4 @@
 <%= content_tag :li do %>
     <%= link_to 'German', locale: :de %>
 <% end unless current_page?(locale: :de) %>
+
