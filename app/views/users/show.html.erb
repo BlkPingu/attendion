@@ -18,9 +18,18 @@
 <h2>Events</h2>
 <%= render @user.events %>
   </div>
+
 <div class="col-md-9">
-<%= link_to 'Create Event', new_event_path, :class => 'navbar-link' %>
+<h2>Joined events</h2>
+  <% AttendingEvent.all.each do |e| %>
+    <div class="row"><div class="col-md-9"><%= e.event.title %>
+    </div></div>
+  <% end %>
+<div class="col-md-9">
+  <h4><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h4>
 </div>
+
+
 
 <% if @user == current_user %>
 <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> | <% end %>
