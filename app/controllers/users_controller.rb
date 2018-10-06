@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   extend Devise::Models
 
+  before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   def index
     @users = User.all
   end
