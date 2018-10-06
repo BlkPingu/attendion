@@ -17,10 +17,9 @@
   <div class="col-md-9">
 <h2>Events</h2>
 <%= render @user.events %>
-
-<h3>Create new event:</h3>
-<%= render 'events/form' %>
   </div>
+<div class="col-md-9">
+<%= link_to 'Create Event', new_event_path, :class => 'navbar-link' %>
 </div>
 
 <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
