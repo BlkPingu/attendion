@@ -30,6 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  help_pape_header: "Help"
   hello: "hello World"
   events:
     event:
@@ -57,3 +58,10 @@ en:
       help_message_html: "Need some help? Since we're still brand new, we are still looking for questions to answer
       in a FAQ-section. If you can think of any - please let us know on Twitter %{href} and we'll see what we can do to help!"
       help_href: "@Attendion"
+  users:
+    show:
+      show_href: "Show"
+  welcome:
+      home:
+        welcome_to_attendion: "Welcome to Attendion, your prefered site for creating and joining events with your friends."
+        how_are_you: "How are you today"
