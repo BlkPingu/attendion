@@ -12,7 +12,6 @@ class AttendingEventsController < ApplicationController
     @user = User.find(params[:user_id])
     @attendingEvent = @user.attending_events.find(params[:id])
     @attendingEvent.destroy
-
     redirect_to user_path(@user)
   end
 end
