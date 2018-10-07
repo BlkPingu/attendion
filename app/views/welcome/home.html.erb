@@ -1,10 +1,11 @@
 <h1>Attendion</h1>
 
 <div>
-Welcome to Attendion, your prefered site for creating and joining events with your friends.
+<%= t ".welcome_to_attendion" %>
+
 <% if user_signed_in? %>
     <% if current_user.name.present?%>
-      How are you today<%= ', '+ current_user.name %>?
+      <%= t ".how_are_you" %>     <%= ', '+ current_user.name %>?
     <% else %>
       To make it easier for everyone, why don't you start and add your name to your profile?
     <% end %>
@@ -16,10 +17,10 @@ Welcome to Attendion, your prefered site for creating and joining events with yo
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.
     <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
   <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    <%= link_to 'Sign up', new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to 'Login', new_user_session_path, :class => 'navbar-link'  %>
   <% end %>
 </p>
 

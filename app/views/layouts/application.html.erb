@@ -24,20 +24,25 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <% if user_signed_in? %>
-          <li><%= link_to 'Users', users_index_path %></li>
-          <li><%= link_to 'Events', events_all_path %></li>
 
+              <li><%= link_to 'New Event', new_event_path %></li>
+              <li><%= link_to 'My Profile', user_path(current_user) %></li>
+              <li><%= link_to 'Users', users_index_path %></li>
+              <li><%= link_to 'Events', events_all_path %></li>
                 
-          <%= render 'layouts/navigation' %>
-          <li><%= link_to 'New Event', new_event_path %></li>
-          <li><%= link_to 'My Profile', user_path(current_user) %></li>
+
             <% else %>
-            <li><%= link_to 'Sign up', new_user_registration_path %></li>
-            <li><%= link_to 'Login', new_user_session_path %></li>
+                <li><%= link_to 'Sign up', new_user_registration_path %></li>
+                <li><%= link_to 'Login', new_user_session_path %></li>
             <% end %>
           <li><%= link_to 'Help', static_pages_help_path %></li>
           <li><%= link_to 'Impressum', static_pages_impressum_path %></li>
           <li><%= link_to 'Privacy', static_pages_privacy_path %></li>
+
+
+
+          <%= render 'layouts/navigation' %>
+
         </ul>
       </div>
     </div>
