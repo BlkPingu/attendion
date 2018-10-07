@@ -19,5 +19,10 @@ Rails.application.routes.draw do
     resources :events do get :join
     end
     root 'welcome#home'
+
+
+    resources :users do
+      resources :attending_events
+    end
   end
 end
