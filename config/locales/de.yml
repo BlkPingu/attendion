@@ -38,16 +38,18 @@ de:
       create_new: "Neues Event erstellen"
   static_pages:
     privacy:
-      message: "Wir sind die brave Mädchen, denn wir sind nicht im gringsten an euren Daten interessiert: Wir sammeln Sie nicht, weshalb wir sie auch nicht verkaufen können.
-              Wir brauchen auch euren echten Namen nicht (oder überhaupt irgendeinen Namen, obwohl wir der Meinung sind es ist schön einen im Profil stehen zu haben.:) )
-               Warum ist es notwendig sich zu registrieren?
-
-               Wir verurteilen jede Art von trollen oder unangemessenen Inhalten und die einzige Möglichkeit dir wir zum unterbinden von Mobbing und Belästigung haben ist Nutzer zu von unseren Diensten auszuschließen.
-               Wenn Ihr weitere Fragen habt: Schreibt uns gerne auf Twitter und wir antworten euch so schnell wir können."
+      message: "Wir sind die Guten, denn wir sind nicht im gringsten an deinen Daten interessiert: Wir sammeln sie
+      nicht, weshalb wir sie auch nicht verkaufen können. Wir brauchen auch deinen echten Namen nicht (oder überhaupt
+      irgendeinen Namen, obwohl wir der Meinung sind, dass es schön ist, einen im Profil stehen zu haben :) )
+      Warum ist es dennoch notwendig, sich bei uns zu registrieren? Wir verurteilen jede Art von Trollen oder
+      unangemessenen Inhalten - und die einzige Möglichkeit, die wir zum Unterbinden von Mobbing und Belästigung haben,
+      ist, Nutzer und Nutzerinnen von unseren Diensten ausschließen zu können.
+      Wenn Ihr weitere Fragen habt: Schreibt uns gerne auf Twitter und wir antworten euch so schnell wir können."
     impressum:
       message: "Attendion wurde 2018 als Semesterprojekt von T.K. und T.G erstellt. Hochschule:"
     help:
-      help_message_html: "Brauchst du Hilfe? Da wir ganz frisch gestartet sind suchen wir noch nach guten Fragen für die FAQ. Wenn dir welche einfallen meld' dich doch mal auf Twitter %{href} und wir versuchen dir zu helfen!"
+      help_message_html: "Brauchst du Hilfe? Da wir ganz frisch gestartet sind suchen wir noch nach guten Fragen für die
+      FAQ. Wenn dir welche einfallen, meld' dich doch mal auf Twitter %{href} und wir versuchen dir zu helfen!"
       help_href: "@Attendion"
   users:
     index:
@@ -63,6 +65,7 @@ de:
 
   welcome:
     home:
-      welcome_to_attendion: "Willkommen bei Attendion, deiner Liblingsseite um Events zu erstellen und sie mit deinen Freunden zu besuchen."
+      welcome_to_attendion: "Willkommen bei Attendion, deiner Lieblingsseite zum Erstellen von Events, die du mit deinen
+      Freundinnen und Freunden besuchen kannst!."
       how_are_you: "Wie geht es dir heute"
       add_name: "To make it easier for everyone, why don't you start and add your name to your profile?"
