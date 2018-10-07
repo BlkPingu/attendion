@@ -8,11 +8,6 @@ class AttendingEventsController < ApplicationController
   end
 
   def destroy
-    AttendingEvent.delete_all(event_id: params(:event_id))
-  end
-
-
-  def destroy
     @user = User.find(params[:user_id])
     @attendingEvent = @user.attending_events.find(params[:id])
     @attendingEvent.destroy
