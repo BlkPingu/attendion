@@ -1,37 +1,37 @@
 <%= form_with(model: [ current_user, current_user.events.build ], local: true) do |f| %>
   <div class="form-group">
   <div class="col-md-8">
-    <%= f.label :title %>
+    <%= f.label t "events.event.title" %>
     <div class="col-md-8">
     <%= f.text_field :title %>
     </div>
   </div>
   <div class="col-md-8">
-    <%= f.label :date %>
+    <%= f.label t "events.event.date" %>
     <div class="col-md-8">
     <%= f.date_field :date %>
     </div>
   </div>
   <div class="col-md-8">
-    <%= f.label :time %>
+    <%= f.label t "events.event.time" %>
     <div class="col-md-8">
     <%= f.time_select :time %>
     </div>
   </div>
   <div class="col-md-8">
-    <%= f.label :location %>
+    <%= f.label t "events.event.location" %>
     <div class="col-md-8">
     <%= f.text_field :location %>
     </div>
   </div>
   <div class="col-md-8">
-    <%= f.label :url %>
+    <%= f.label t "events.event.URL" %>
     <div class="col-md-8">
     <%= f.text_field :url %>
     </div>
   </div>
   <div class="col-md-8">
-    <%= f.label :description %>
+    <%= f.label t "events.event.description" %>
     <div class="col-md-8">
     <%= f.text_area :description %>
     </div>

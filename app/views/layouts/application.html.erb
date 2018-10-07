@@ -25,21 +25,22 @@
         <ul class="nav navbar-nav">
           <% if user_signed_in? %>
 
-              <li><%= link_to 'New Event', new_event_path %></li>
-              <li><%= link_to 'My Profile', user_path(current_user) %></li>
-              <li><%= link_to 'Users', users_index_path %></li>
-              <li><%= link_to 'Events', events_all_path %></li>
-                
 
-            <% else %>
-                <li><%= link_to 'Sign up', new_user_registration_path %></li>
-                <li><%= link_to 'Login', new_user_session_path %></li>
-            <% end %>
-          <li><%= link_to 'Help', static_pages_help_path %></li>
-          <li><%= link_to 'Impressum', static_pages_impressum_path %></li>
-          <li><%= link_to 'Privacy', static_pages_privacy_path %></li>
+            <li><%=  link_to(t(".new_event_href"), new_event_path) %></li>
+            <li><%=  link_to(t(".my_Profile_href"), user_path(current_user)) %></li>
+            <li><%=  link_to(t(".users_href"), users_index_path ) %></li>
+            <li><%=  link_to(t(".events_href"), events_all_path) %></li>
 
+          <% else %>
 
+            <li><%=  link_to(t(".signup_href"), new_user_registration_path) %></li>
+            <li><%=  link_to(t(".login_href"), new_user_session_path) %></li>
+
+        <% end %>
+
+          <li><%=  link_to(t(".help_href"), static_pages_help_path) %></li>
+          <li><%=  link_to(t(".imprint_href"), static_pages_impressum_path) %></li>
+          <li><%=  link_to(t(".privacy_href"), static_pages_privacy_path) %></li>
 
           <%= render 'layouts/navigation' %>
 
@@ -49,10 +50,11 @@
     <p class="navbar-text pull-right">
       <% if user_signed_in? %>
         <%if current_user.name.present? %>
-        Logged in as <strong><%= current_user.name %></strong> |
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-          <% else %>
-          Logged in as <strong><%= current_user.email %></strong>.
+              <%= t ".logged_in_as" %> <strong><%= current_user.name %></strong> |
+          <%=  link_to(t(".logout_href"), destroy_user_session_path, method: :delete, :class => 'navbar-link') %>
+
+    <% else %>
+         <%= t ".logged_in_as" %><strong><%= current_user.email %></strong>.
       <% end %>
         <% end %>
     </p>

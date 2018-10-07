@@ -12,14 +12,14 @@
 
 <% if @user == current_user %>
   <div class="col-md-9">
-    <h2>My Events</h2>
+    <h2><%= t ".my_events" %></h2>
     <%= render @user.events %>
   </div>
 <% end %>
 
 <div class="col-md-9">
   <% if @user == current_user %>
-    <h2>Events you've joined</h2>
+    <h2><%= t ".joined_events" %></h2>
   <% elsif @user.name? %>
     <h2>Events <%= @user.name %> has joined</h2>
   <% else %>
@@ -38,10 +38,12 @@
   <% end %>
 
   <div class="col-md-9">
-    <h4><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h4>
+    <h4><%=  link_to(t(".create_Event_href"), new_event_path, :class => 'navbar-link') %></h4>
+
   </div>
 
   <% if @user == current_user %>
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%=  link_to(t(".edit_profile_href"), edit_user_registration_path, :class => 'navbar-link') %> |
+
   <% end %>
-<%= link_to 'Back', users_path, :class => 'navbar-link' %>
+<%=  link_to(t(".back_href"), users_path, :class => 'navbar-link') %>

@@ -1,18 +1,41 @@
 de:
+  layouts:
+    application:
+
+      new_event_href: "Neues Event"
+      my_Profile_href: "Mein Profil"
+      users_href: "Nutzer"
+      events_href: "Events"
+
+      signup_href: "Anmelden"
+      login_href: "Einloggen"
+
+      help_href: "Hilfe"
+      imprint_href: "Impressum"
+      privacy_href: "Privatsphäre"
+
+      logout_href: "Ausloggen"
+
+      logged_in_as: "Eingeloggt als"
+
   help_pape_header: "Hilfe"
   hello: "HALLO WELT"
   events:
     event:
+      destroy_event_href: "Event löschen"
       title: "Titel"
       date: "Datum"
       time: "Uhrzeit"
       location: "Ort"
       URL: "URL"
       description: "Beschreibung"
-    form:
+      admin: "Ersteller"
+      no_description: "Keine Beschreibung vorhanden"
+      all_events: "Alle Events"
     all:
-    join:
+      join_href:  "Event beitreten"
     new:
+      create_new: "Neues Event erstellen"
   static_pages:
     privacy:
       message: "Wir sind die brave Mädchen, denn wir sind nicht im gringsten an euren Daten interessiert: Wir sammeln Sie nicht, weshalb wir sie auch nicht verkaufen können.
@@ -27,10 +50,19 @@ de:
       help_message_html: "Brauchst du Hilfe? Da wir ganz frisch gestartet sind suchen wir noch nach guten Fragen für die FAQ. Wenn dir welche einfallen meld' dich doch mal auf Twitter %{href} und wir versuchen dir zu helfen!"
       help_href: "@Attendion"
   users:
-    show:
+    index:
       show_href: "Anzeigen"
+    show:
+      my_events: "Meine Events"
+      joined_events: "Beigetretene Events"
+      create_Event_href: "Neues Event erstellen"
+      edit_profile_href: "Profil bearbeiten"
+      back_href: "Zurück"
+
+
+
   welcome:
     home:
       welcome_to_attendion: "Willkommen bei Attendion, deiner Liblingsseite um Events zu erstellen und sie mit deinen Freunden zu besuchen."
       how_are_you: "Wie geht es dir heute"
-
+      add_name: "To make it easier for everyone, why don't you start and add your name to your profile?"
