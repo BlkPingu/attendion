@@ -1,5 +1,7 @@
-class EventsController < ApplicationController
+# frozen_string_literal: true
 
+# Controller for Events
+class EventsController < ApplicationController
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -23,28 +25,17 @@ class EventsController < ApplicationController
   def join
     @event = Event.find(params[:id])
     @attending_event = current_user.attending_events.new(event: @event)
-    if @attending_event.save
-      redirect_to events_all_path
-    else
-      redirect_to events_all_path
-
-    end
+    redirect_to events_all_path
   end
 
-  def all
-  end
+  def all; end
 
-  def events
-  end
+  def events; end
 
   private
+
   def event_params
-    params.require(:event).permit(:title, :date, :time, :location, :url, :description,)
+    params.require(:event).permit(:title, :date, :time,
+                                  :location, :url, :description)
   end
-
-
 end
-
-
-
-
