@@ -1,9 +1,12 @@
-# frozen_string_literal: true
-
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  include Devise::Test::IntegrationHelpers
+
+  test 'authenticated users can see all users' do
+    sign_in users()
+
+    get '/users'
+    assert_response :success
+  end
 end
