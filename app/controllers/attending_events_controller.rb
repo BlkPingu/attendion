@@ -14,4 +14,3 @@ class AttendingEventsController < ApplicationController
   end
 
 end
-
