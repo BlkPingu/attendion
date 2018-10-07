@@ -29,10 +29,10 @@
   <% AttendingEvent.all.each do |e| %>
     <div class="row">
       <div class="col-md-9">
-        <strong><%= e.event.title %></strong>
-      </div>
-      <div class="col-md-9">
-        <%= e.event.date %>
+        <strong>
+          <%= link_to e.event.title, event_path(e.event), :class => 'navbar-link' %>
+        </strong>
+        (<%= e.event.date %>)
       </div>
     </div>
   <% end %>

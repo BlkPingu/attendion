@@ -9,6 +9,10 @@ class EventsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   def destroy
     @user = User.find(params[:user_id])
     @event = @user.events.find(params[:id])

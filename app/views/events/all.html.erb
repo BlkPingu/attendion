@@ -4,24 +4,18 @@
 
 <p></p>
 
-    <table class="table" width="100%">
+    <table class="table">
       <tr>
         <th>Title</th>
         <th>Date</th>
-        <th>Time</th>
-        <th>Where</th>
-        <th>Admin</th>
         <th></th>
       </tr>
 
       <% Event.all.each do |e| %>
 
       <tr>
-        <td><%= e.title %></td>
+        <td><%= link_to e.title, event_path(e), :class => 'navbar-link' %></td>
         <td><%= e.date %></td>
-        <td><%= e.try(:time).try(:strftime, '%H:%M') %></td>
-        <td><%= e.location %></td>
-        <td><%= e.user.name %></td>
         <td><%= button_to "join event", join_event_path(e), method: :get %></td>
       </tr>
 
