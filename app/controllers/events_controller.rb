@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @event = @user.events.create(event_params)
-    redirect_to user_path(@user)
+    redirect_to join_event_path(@event)
   end
 
   def show
