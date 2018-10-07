@@ -23,7 +23,6 @@
           <%=  link_to(t("layouts.application.logout_href"), destroy_user_session_path, method: :delete, :class => 'navbar-link') %>
 
     <% else %>
-         <%= t ".logged_in_as" %><strong><%= current_user.email %></strong> |
       <% end %>
         <% end %>
     </p>

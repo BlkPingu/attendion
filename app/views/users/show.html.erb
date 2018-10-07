@@ -22,8 +22,10 @@
     <h2><%= t ".joined_events" %></h2>
   <% elsif @user.name? %>
     <h2>Events <%= @user.name %> has joined</h2>
-  <% else %>
-    <h2>Events they've joined</h2>
+
+
+<% else %>
+    <h2><%= t ".Events_theyve_joined" %></h2>
   <% end %>
 
   <% AttendingEvent.all.each do |e| %>
