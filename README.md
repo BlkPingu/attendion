@@ -1,39 +1,27 @@
-# README
+# Attendion
 
+A web app to create and attend events. Open source, free, not caring about your data.
 
-* **Ruby version:** 
+## Before you start
 
-ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin17]
+Attendion is deployed on Heroku: https://attendion.herokuapp.com/ - have a look around!
 
-* **Rails version:**
+## Getting started
 
-Rails 5.1.6
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-* **Database creation:**
+## Prerequisites
 
-If you're getting [this Error](https://stackoverflow.com/questions/21309901/getting-migrations-are-pending-run-bin-rake-dbmigrate-rails-env-development): 
+You need Ruby 2.4.1 and Rails 5.1.6 installed.
 
-> Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.” after cloning and migrating the project
+## Installing
 
-after starting the project on your machine locally, run:
+Fork the repository and clone it to your own local machine. If you have Ruby and Rails installed, change to the directory (`cd attendion`) and type `rails/bin server` to run the server. Open a new tab in your terminal and run `bin/rake db:migrate RAILS_ENV=development` to make the app work locally. You can now access the webpage at `http://localhost:3000/`.
 
-```
-rm -f db/*.sqlite3
-      rake db:create
-      RAILS_ENV=development rake db:migrate
-      rails s -e development
-```
+## Contributing
 
-* **Deployment instructions:** 
+We're happy to chat if you have any additional ideas to improve Attendion! Contact us on Twitter (@attendion) or comment on our issues.
 
-Deployed on Heroku: https://attendion.herokuapp.com/
+## Authors
 
-* Database initialization:
-
-* System dependencies:
-
-* Configuration:
-
-* How to run the test suite:
-
-* Services (job queues, cache servers, search engines, etc.)
+tobias (BlkPingu) and tabea (einhorntee)
