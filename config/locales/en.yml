@@ -66,6 +66,7 @@ en:
       join_href: "Join Event"
     new:
      create_new: "Create a new event"
+     create: "Create"
   static_pages:
     privacy:
       message: "We are the good girls. We are not interested in your data at all: We won't collect it, so we can't sell it either.
