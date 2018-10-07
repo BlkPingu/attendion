@@ -1,38 +1,49 @@
 <div class="row">
-<div class="col-md-4">
-  <strong><%= t "events.event.title" %></strong>
-  <%= event.title %>
+  <div class="col-md-4">
+    <strong><%= t "events.event.title" %>:</strong>
+    <%= event.title %>
+  </div>
+
+  <div class="col-md-4">
+    <strong><%= t "events.event.date" %>:</strong>
+    <%= event.date %>
+  </div>
 </div>
-
-<div class="col-md-4">
-  <strong><%= t "events.event.date" %></strong>
-  <%= event.date %>
-</div>
-
-<div class="col-md-4">
-
-  <strong><%= t "events.event.time" %></strong>
-  <%= event.try(:time).try(:strftime, '%H:%M') %>
-</div>
-
-<div class="col-md-4">
-  <strong><%= t "events.event.location" %></strong>
-  <%= event.location %>
-</div>
-
-<div class="col-md-4">
-  <strong><%= t "events.event.URL" %></strong>
-  <%= event.url %>
-</div></div>
 <div class="row">
-<div class="col-md-4">
-  <strong><%= t "events.event.title" %></strong>
-  <%= event.description %>
-</div></div>
+  <% if event.time? %>
+    <div class="col-md-4">
+      <strong><%= t "events.event.time" %>:</strong>
+      <%= event.try(:time).try(:strftime, '%H:%M') %>
+    </div>
+  <% end %>
 
+  <% if event.location? %>
+    <div class="col-md-4">
+      <strong><%= t "events.event.location" %>:</strong>
+      <%= event.location %>
+    </div>
+  <% end %>
+
+  <% if event.url? %>
+    <div class="col-md-4">
+      <strong><%= t "events.event.URL" %>:</strong>
+      <%= event.url %>
+    </div>
+  <% end %>
+
+<div class="col-md-4">
+  <strong><%= t "events.event.description" %>:</strong>
+  <% if event.description? %>
+    <%= event.description %>
+    <% else %>
+    No description provided
+    <% end %>
+</div>
+<div class="col-md-8">
+  <br>
 <p>
   <%=  link_to(t("events.event.destroy_event_href"), [event.user, event],
                method: :delete,
                data: { confirm: 'Are you sure?' }, :class => 'navbar-link') %>
 
-</p>
+</p></div>

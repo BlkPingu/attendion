@@ -35,10 +35,11 @@
           <%= link_to e.event.title, event_path(e.event), :class => 'navbar-link' %>
         </strong>
         (<%= e.event.date %>)
+        <% if @user == current_user %>
         <%= button_to 'leave', user_attending_event_path(current_user, e),
                     method: :delete,
                     data: { confirm: 'Are you sure?' } %>
-
+        <% end %>
 
       </div>
     </div>
