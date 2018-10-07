@@ -30,6 +30,24 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  layouts:
+    application:
+      new_event_href: "New Event"
+      my_Profile_href: "My Profile"
+      users_href: "Users"
+      events_href: "Events"
+
+      signup_href: "Sign up"
+      login_href: "Login"
+
+      help_href: "Help"
+      imprint_href: "Imprint"
+      privacy_href: "Privacy"
+
+      logout_href: "Logout"
+
+      logged_in_as: "Logged in as"
+
   help_pape_header: "Help"
   hello: "hello World"
   events:
@@ -59,9 +77,16 @@ en:
       in a FAQ-section. If you can think of any - please let us know on Twitter %{href} and we'll see what we can do to help!"
       help_href: "@Attendion"
   users:
-    show:
+    index:
       show_href: "Show"
+    show:
+      my_events: "My Events"
+      joined_events: "Events you've joined"
+      create_Event_href: "Create new Event"
+      edit_profile_href: "Edit Profile"
+      back_href: "Back"
   welcome:
       home:
         welcome_to_attendion: "Welcome to Attendion, your prefered site for creating and joining events with your friends."
         how_are_you: "How are you today"
+        add_name: "To make it easier for everyone, why don't you start and add your name to your profile?"

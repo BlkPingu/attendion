@@ -7,7 +7,7 @@
     <% if current_user.name.present?%>
       <%= t ".how_are_you" %>     <%= ', '+ current_user.name %>?
     <% else %>
-      To make it easier for everyone, why don't you start and add your name to your profile?
+      <%= t ".add_name" %>
     <% end %>
   <% end %>
 </div>
