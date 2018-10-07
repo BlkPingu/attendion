@@ -13,6 +13,21 @@
 
   <%= render 'layouts/navigation' %>
 
+        </ul>
+      </div>
+    </div>
+    <p class="navbar-text pull-right">
+      <% if user_signed_in? %>
+        <%if current_user.name.present? %>
+              <%= t ".logged_in_as" %> <strong><%= current_user.name %></strong> |
+          <%=  link_to(t("layouts.application.logout_href"), destroy_user_session_path, method: :delete, :class => 'navbar-link') %>
+
+    <% else %>
+         <%= t ".logged_in_as" %><strong><%= current_user.email %></strong> |
+      <% end %>
+        <% end %>
+    </p>
+  </nav>
 
     <div class="container">
     <%= yield %>

@@ -7,4 +7,8 @@ class AttendingEventsController < ApplicationController
     AttendingEvent.new(user_id: current_user.id, event_id: params[:event_id])
   end
 
+  def destroy
+    AttendingEvent.delete_all(event_id: params(:event_id))
+  end
+
 end
