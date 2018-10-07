@@ -52,6 +52,7 @@ en:
   hello: "hello World"
   events:
     event:
+      destroy_event_href: "Delete Event"
       title: "Title"
       date: "Date"
       time: "Time"

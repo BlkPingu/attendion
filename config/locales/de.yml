@@ -22,6 +22,7 @@ de:
   hello: "HALLO WELT"
   events:
     event:
+      destroy_event_href: "Event löschen"
       title: "Titel"
       date: "Datum"
       time: "Uhrzeit"
