@@ -10,8 +10,9 @@
 </div>
 
 <div class="col-md-4">
-  <strong><%= t :time %></strong>
-  <%= event.time %>
+
+  <strong>Time:</strong>
+  <%= event.try(:time).try(:strftime, '%H:%M') %>
 </div>
 
 <div class="col-md-4">

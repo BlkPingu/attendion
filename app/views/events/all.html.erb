@@ -4,47 +4,21 @@
 
 <p></p>
 
-    <table class="table" width="100%">
+    <table class="table">
       <tr>
         <th>Title</th>
         <th>Date</th>
-        <th>Time</th>
-        <th>Where</th>
-        <th>Admin</th>
         <th></th>
       </tr>
 
       <% Event.all.each do |e| %>
 
       <tr>
-        <td><%= e.title %></td>
+        <td><%= link_to e.title, event_path(e), :class => 'navbar-link' %></td>
         <td><%= e.date %></td>
-        <td><%= e.time %></td>
-        <td><%= e.location %></td>
-        <td><%= e.user.name %></td>
         <td><%= button_to "join event", join_event_path(e), method: :get %></td>
       </tr>
 
 
       <% end %>
     </table>
-
-<h2>Joined events</h2>
-
-    <table width="100%">
-    <tr>
-      <th>id</th>
-      <th>(not yet functional)</th>
-
-    </tr>
-
-    <% AttendingEvent.all.each do |e| %>
-
-
-    <tr>
-      <td><%= e.id %></td>
-      <td width="30%"><%= button_to "leave"%></td>
-
-    <% end %>
-
-</table>

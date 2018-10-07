@@ -1,40 +1,47 @@
-
 <h1><%= @user.name %></h1>
+
 <div class="row">
   <div class="col-md-6">
-<%= image_tag @user.avatar.url if @user.avatar? %>
+    <%= image_tag @user.avatar.url if @user.avatar? %>
+  </div>
+
+  <p>
+    <%= @user.aboutme %>
+  </p>
 </div>
 
-<p>
-  <%= @user.aboutme %>
-</p>
-
-  </div>
+<% if @user == current_user %>
   <div class="col-md-9">
-<h2>Events</h2>
-<%= render @user.events %>
+    <h2>My Events</h2>
+    <%= render @user.events %>
   </div>
+<% end %>
 
 <div class="col-md-9">
   <% if @user == current_user %>
-<h2>Events you've joined</h2>
-  <% AttendingEvent.all.each do |e| %>
-   <div class="row">
-     <div class="col-md-9">
-       <strong><%= e.event.title %></strong>
-     </div>
-     <div class="col-md-9">
-       <%= e.event.date %>
-     </div>
-   </div>
+    <h2>Events you've joined</h2>
+  <% elsif @user.name? %>
+    <h2>Events <%= @user.name %> has joined</h2>
+  <% else %>
+    <h2>Events they've joined</h2>
   <% end %>
-    <% end %>
-<div class="col-md-9">
-  <h4><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h4>
-</div>
 
+  <% AttendingEvent.all.each do |e| %>
+    <div class="row">
+      <div class="col-md-9">
+        <strong>
+          <%= link_to e.event.title, event_path(e.event), :class => 'navbar-link' %>
+        </strong>
+        (<%= e.event.date %>)
+      </div>
+    </div>
+  <% end %>
 
+  <div class="col-md-9">
+    <h4><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h4>
+  </div>
 
-<% if @user == current_user %>
-<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> | <% end %>
+  <% if @user == current_user %>
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <% end %>
 <%= link_to 'Back', users_path, :class => 'navbar-link' %>

@@ -1,11 +1,16 @@
 class EventsController < ApplicationController
 
-  http_basic_authenticate_with name: "admin", password: "secret", only: :destroy
+  before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def create
     @user = User.find(params[:user_id])
     @event = @user.events.create(event_params)
     redirect_to user_path(@user)
+  end
+
+  def show
+    @event = Event.find(params[:id])
   end
 
   def destroy
