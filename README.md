@@ -16,7 +16,7 @@ You need Ruby 2.4.1 and Rails 5.1.6 installed.
 
 ## Installing
 
-Fork the repository and clone it to your own local machine. If you have Ruby and Rails installed, change to the directory (`cd attendion`) and type `rails/bin server` to run the server. Open a new tab in your terminal and run `bin/rake db:migrate RAILS_ENV=development` to make the app work locally. You can now access the webpage at `http://localhost:3000/`.
+Fork the repository and clone it to your own local machine. If you have Ruby and Rails installed, change to the directory (`cd attendion`) and type `bundle install --without production` to install all required gems. Finally, type `rails test` to check if everything works as intended before running `bin/rake db:migrate RAILS_ENV=development` to make the app work locally. Finally, start the server with `rails server`. You can now access the webpage at `http://localhost:3000/`.
 
 ## Contributing
 
