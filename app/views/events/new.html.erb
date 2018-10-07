@@ -1,3 +1,3 @@
-<h3>Create a new event <%= ','+current_user.name if current_user.name.present? %></h3>
+<h3><%= t ".create_new" %> <%= ','+current_user.name if current_user.name.present? %></h3>
 
 <div class="col-lg-10"><%= render 'form' %></div>

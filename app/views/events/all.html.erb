@@ -1,13 +1,13 @@
 <div class="pull-right"><h3><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h3></div>
 
-<h1>All events</h1>
+<h1><%= t "events.event.all_events" %></h1>
 
 <p></p>
 
     <table class="table">
       <tr>
-        <th>Title</th>
-        <th>Date</th>
+        <th><%= t "events.event.title" %></th>
+        <th><%= t "events.event.date" %></th>
         <th></th>
       </tr>
 
@@ -16,7 +16,9 @@
       <tr>
         <td><%= link_to e.title, event_path(e), :class => 'navbar-link' %></td>
         <td><%= e.date %></td>
-        <td><%= button_to 'join event', join_event_path(e), method: :get %></td>
+        <td>
+          <%=  link_to(t(".join_href"), join_event_path(e), method: :get) %>
+        </td>
       </tr>
 
 

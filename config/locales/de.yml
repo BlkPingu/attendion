@@ -29,10 +29,13 @@ de:
       location: "Ort"
       URL: "URL"
       description: "Beschreibung"
-    form:
+      admin: "Ersteller"
+      no_description: "Keine Beschreibung vorhanden"
+      all_events: "Alle Events"
     all:
-    join:
+      join_href:  "Event beitreten"
     new:
+      create_new: "Neues Event erstellen"
   static_pages:
     privacy:
       message: "Wir sind die brave Mädchen, denn wir sind nicht im gringsten an euren Daten interessiert: Wir sammeln Sie nicht, weshalb wir sie auch nicht verkaufen können.

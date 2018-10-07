@@ -59,10 +59,13 @@ en:
       location: "Location"
       URL: "URL"
       description: "Description"
-    form:
+      admin: "Creator"
+      no_description: "No description provided"
+      all_events: "All Events"
     all:
-    join:
+      join_href: "Join Event"
     new:
+     create_new: "Create a new event"
   static_pages:
     privacy:
       message: "We are the good girls. We are not interested in your data at all: We won't collect it, so we can't sell it either.
