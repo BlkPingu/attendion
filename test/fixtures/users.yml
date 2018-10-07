@@ -4,6 +4,7 @@ one:
   encrypted_password: MyString
   name: Anna
   email: anna@beta.com
+  encrypted_password: paswoooort
 
 two:
   name: Ben

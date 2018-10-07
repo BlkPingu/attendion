@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
@@ -25,5 +23,5 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get users_index_path
     assert_response :success
   end
-
+  
 end
