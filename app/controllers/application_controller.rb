@@ -19,6 +19,8 @@ class ApplicationController < ActionController::Base
                                                avatar
                                                current_password])
 
+  end
+
   private
 
   def set_locale
