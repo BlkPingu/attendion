@@ -5,3 +5,63 @@
     :why: free to use
     :versions: []
     :when: 2018-06-04 16:31:18.806056428 Z
+- - :whitelist
+  - Apache 2.0
+  - :who: T. G
+    :why: free to use
+    :versions: []
+    :when: 2018-10-07 17:18:05.148499264 Z
+- - :whitelist
+  - ruby
+  - :who: T. G
+    :why: free to use
+    :versions: []
+    :when: 2018-10-07 17:18:13.372260534 Z
+- - :whitelist
+  - BSD
+  - :who: T. G
+    :why: free to use
+    :versions: []
+    :when: 2018-10-07 17:18:22.521312821 Z
+- - :whitelist
+  - New BSD
+  - :who: T. G
+    :why: free to use
+    :versions: []
+    :when: 2018-10-07 17:22:27.696928544 Z
+- - :whitelist
+  - Simplified BSD
+  - :who: T. G
+    :why: free to use
+    :versions: []
+    :when: 2018-10-07 17:22:35.321991045 Z
+- - :whitelist
+  - GPL--3.0+
+  - :who: T. G
+    :why: free to use
+    :versions: []
+    :when: 2018-10-07 17:22:51.416110188 Z
+- - :approve
+  - attendion
+  - :who: T. G.
+    :why: Our own thing
+    :versions: []
+    :when: 2018-10-07 17:23:54.252857963 Z
+- - :approve
+  - blankslate
+  - :who: T. G.
+    :why: Free to use
+    :versions: []
+    :when: 2018-10-07 17:24:18.252125119 Z
+- - :approve
+  - bundler-audit
+  - :who: T. G.
+    :why: Free to use
+    :versions: []
+    :when: 2018-10-07 17:24:30.337478629 Z
+- - :approve
+  - iye
+  - :who: T. G.
+    :why: Free to use
+    :versions: []
+    :when: 2018-10-07 17:24:38.199162995 Z
