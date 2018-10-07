@@ -42,11 +42,16 @@ class UsersController < ApplicationController
   def users
   end
 
+  def delete
+    @user = User.find(params[:post_id])
+    @attendingEvent = @attendingEvent.find(params[:id])
+    @attendingEvent.destroy
+  end
+
   private
     def user_params
       params.require(:user).permit(:name, :email, :password, :aboutme, :avatar)
     end
-
 
 
 end
