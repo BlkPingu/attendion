@@ -11,7 +11,7 @@
 
 <div class="col-md-4">
   <strong>Time:</strong>
-  <%= event.time %>
+  <%= event.try(:time).try(:strftime, '%H:%M') %>
 </div>
 
 <div class="col-md-4">

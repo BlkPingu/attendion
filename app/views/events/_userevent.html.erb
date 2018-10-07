@@ -1,0 +1,44 @@
+ <div class="col-md-2">
+    <strong>Date:</strong>
+    <%= @event.date %>
+  </div>
+
+  <% if @event.time? %>
+  <div class="col-md-2">
+    <strong>Time:</strong>
+    <%= @event.try(:time).try(:strftime, '%H:%M') %>
+  </div>
+  <% end %>
+
+  <% if @event.location? %>
+  <div class="col-md-2">
+    <strong>Location:</strong>
+    <%= @event.location %>
+  </div>
+  <% end %>
+
+  <% if @event.url? %>
+  <div class="col-md-4">
+    <strong>URL:</strong>
+    <%= @event.url %>
+  </div>
+  <% end %>
+
+   <div class="col-md-4">
+     <strong>Creator:</strong>
+     <% if User.find(@event.user_id).name? %>
+       <%= link_to User.find(@event.user_id).name, user_path(User.find(@event.user_id)), :class => 'navbar-link' %>
+     <% else %>
+       <%= link_to 'Anonymous', user_path(User.find(@event.user_id)), :class => 'navbar-link' %>
+     <% end %>
+   </div>
+
+<p><br>
+  <div class="col-md-4">
+    <strong>Description:</strong>
+    <% if @event.description? %>
+    <%= @event.description %>
+    <% else %>
+    No description provided
+    <% end %>
+  </div>
