@@ -1,5 +1,7 @@
-class AttendingEventsController < ApplicationController
+# frozen_string_literal: true
 
+# Join Events and Users with each other
+class AttendingEventsController < ApplicationController
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -12,3 +14,4 @@ class AttendingEventsController < ApplicationController
   end
 
 end
+

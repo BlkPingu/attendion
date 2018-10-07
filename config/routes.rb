@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-
+  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
     get 'static_pages/help'
     get 'static_pages/privacy'
     get 'static_pages/impressum'
@@ -16,7 +15,8 @@ Rails.application.routes.draw do
         get :join
       end
     end
-    resources :events do get :join
+    resources :events do
+      get :join
     end
     root 'welcome#home'
   end
