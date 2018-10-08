@@ -90,6 +90,8 @@ en:
       create_Event_href: "Create new Event"
       edit_profile_href: "Edit Profile"
       back_href: "Back"
+      Events_theyve_joined: "Events they've joined"
+
   welcome:
       home:
         welcome_to_attendion: "Welcome to Attendion, your prefered site for creating and joining events with your friends."
