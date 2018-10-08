@@ -54,6 +54,9 @@ de:
       help_href: "@Attendion"
   users:
     index:
+      name: "Nutzername"
+      email: "Email"
+
       show_href: "Anzeigen"
       all_attendion_members: "Alle Attendion Mitglieder"
     show:
@@ -65,6 +68,7 @@ de:
       Events_theyve_joined: "Events denen sie beigetreten sind"
       sure: "Sicher?"
       events_of: "Events von "
+      leave: "doch nicht kommen"
 
 
 

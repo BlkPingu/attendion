@@ -1,14 +1,27 @@
 <h1><%= t ".all_attendion_members" %> </h1>
 
+<table class = "table">
+  <tr>
+    <th><%= t ".name" %></th>
+    <th><%= t ".email" %></th>
+    <th></th>
+  </tr>
+
   <% @users.each do |user| %>
+
+      <tr>
     <div class="row">
       <div class="col-md-4">
         <%= image_tag user.avatar.url, width: '10%' if user.avatar.present?%>
         <div class="col-md-4">
-      <%= user.name %>
-      <%= user.email %>
-      <%=  link_to(t(".show_href"), user_path(user), :class => 'navbar-link') %>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%=  button_to(t(".show_href"), user_path(user), :class => 'navbar-link') %><td>
         </div>
       </div>
     </div>
+  </tr>
+
   <% end %>
+
+</table>

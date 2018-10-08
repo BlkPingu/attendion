@@ -85,6 +85,8 @@ en:
     index:
       show_href: "Show"
       all_attendion_members: "All Attendion Members"
+      name: "Username"
+      email: "Mail"
     show:
       my_events: "My Events"
       joined_events: "Events you've joined"
@@ -94,6 +96,7 @@ en:
       Events_theyve_joined: "Events they've joined"
       sure: "Are you sure?"
       events_of: "Events of "
+      leave: "don't go"
 
 
   welcome:
