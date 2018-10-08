@@ -21,7 +21,7 @@
   <% if @user == current_user %>
     <h2><%= t ".joined_events" %></h2>
   <% elsif @user.name? %>
-    <h2>Events <%= @user.name %> has joined</h2>
+    <h2><%=t ".events_of" %> <%= @user.name %></h2>
 
 
 <% else %>
@@ -39,7 +39,7 @@
           <% if @user == current_user %>
           <%= button_to 'leave', user_attending_event_path(current_user, e),
                       method: :delete,
-                      data: { confirm: 'Are you sure?' } %>
+                      data: { confirm: 'Are you sure' } %>
           <% end %>
 
       </div>

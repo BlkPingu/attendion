@@ -62,7 +62,9 @@ de:
       create_Event_href: "Neues Event erstellen"
       edit_profile_href: "Profil bearbeiten"
       back_href: "Zurück"
-      Events_theyve_joined: "Events denen Sie beigetreten sind"
+      Events_theyve_joined: "Events denen sie beigetreten sind"
+      sure: "Sicher?"
+      events_of: "Events von "
 
 
 
@@ -71,7 +73,7 @@ de:
       welcome_to_attendion: "Willkommen bei Attendion, deiner Lieblingsseite zum Erstellen von Events, die du mit deinen
       Freundinnen und Freunden besuchen kannst!."
       how_are_you: "Wie geht es dir heute"
-      add_name: "To make it easier for everyone, why don't you start and add your name to your profile?"
+      add_name: "Um es allen einfacher zu machen, warum nicht damit anfangen deinem Profil einen Namen hinzuzufügen?"
 
   errors:
     messages:

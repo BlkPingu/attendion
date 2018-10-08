@@ -92,6 +92,9 @@ en:
       edit_profile_href: "Edit Profile"
       back_href: "Back"
       Events_theyve_joined: "Events they've joined"
+      sure: "Are you sure?"
+      events_of: "Events of "
+
 
   welcome:
       home:
