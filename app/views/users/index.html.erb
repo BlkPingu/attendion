@@ -13,7 +13,7 @@
       <tr>
           <td><%= user.name %></td>
           <td><%= user.email %></td>
-          <td><%=  button_to(t(".show_href"), user_path(user), :class => 'navbar-link') %><td>
+          <td><%=  link_to(t(".show_href"), user_path(user), :class => 'navbar-link') %></td>
       </tr>
 
   <% end %>
