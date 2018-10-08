@@ -28,7 +28,8 @@
     <h2><%= t ".Events_theyve_joined" %></h2>
   <% end %>
 
-  <% AttendingEvent.all.each do |e| %>
+  <%  @userevents = AttendingEvent.where(:user => current_user) %>
+  <% @userevents.each do |e| %>
     <div class="row">
       <div class="col-md-9">
         <strong>
