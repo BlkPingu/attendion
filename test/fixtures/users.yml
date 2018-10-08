@@ -1,10 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  encrypted_password: MyString
   name: Anna
   email: anna@beta.com
   encrypted_password: paswoooort
+  aboutme: MyString
 
 two:
   name: Ben
