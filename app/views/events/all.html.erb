@@ -1,4 +1,6 @@
-<div class="pull-right"><h3><%= link_to 'Create new Event', new_event_path, :class => 'navbar-link' %></h3></div>
+<div class="pull-right"><h3>
+  <%=  link_to(t("users.show.create_Event_href"), new_event_path , :class => 'navbar-link' )%>
+</h3></div>
 
 <h1><%= t "events.event.all_events" %></h1>
 
