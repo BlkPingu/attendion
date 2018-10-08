@@ -26,6 +26,10 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+
+    super
+    UserMailer.welcome(resource).deliver unless resource.invalid?
+
   end
 
   def update
