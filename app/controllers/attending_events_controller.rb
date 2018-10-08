@@ -1,5 +1,7 @@
-class AttendingEventsController < ApplicationController
+# frozen_string_literal: true
 
+# Join Events and Users with each other
+class AttendingEventsController < ApplicationController
   before_action :authenticate_user!
 
   def join
@@ -10,7 +12,6 @@ class AttendingEventsController < ApplicationController
     @user = User.find(params[:user_id])
     @attendingEvent = @user.attending_events.find(params[:id])
     @attendingEvent.destroy
-
     redirect_to user_path(@user)
   end
 end
