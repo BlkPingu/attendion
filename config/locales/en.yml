@@ -84,6 +84,7 @@ en:
   users:
     index:
       show_href: "Show"
+      all_attendion_members: "All Attendion Members"
     show:
       my_events: "My Events"
       joined_events: "Events you've joined"

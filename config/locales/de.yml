@@ -55,6 +55,7 @@ de:
   users:
     index:
       show_href: "Anzeigen"
+      all_attendion_members: "Alle Attendion Mitglieder"
     show:
       my_events: "Meine Events"
       joined_events: "Beigetretene Events"
