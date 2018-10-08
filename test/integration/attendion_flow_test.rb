@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class AttendionFlowTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   test "can see the welcome page" do
     get "/"
     assert_select "h1", "Attendion"
