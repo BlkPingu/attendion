@@ -24,7 +24,12 @@ class EventsController < ApplicationController
   def join
     @event = Event.find(params[:id])
     @attending_event = current_user.attending_events.new(event: @event)
-    redirect_to events_all_path
+    if @attending_event.save
+      redirect_to events_all_path
+    else
+      redirect_to events_all_path
+
+    end
   end
 
   def all; end
