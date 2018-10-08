@@ -1,11 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email: MyString
-  password: MyString
+  name: Anna
+  email: anna@beta.com
+  encrypted_password: paswoooort
+  aboutme: MyString
 
 two:
-  name: MyString
-  email: MyString
-  password: MyString
+  name: Ben
+  email: ben@alpha.com
+  encrypted_password: passwoooord
+
+<% 50.times do |n| %>
+user_<%= n %>:
+  name: <%= "user#{n}" %>
+  email: <%= "user#{n}@example.com" %>
+  encrypted_password: <%= "passss{n}warrt" %>
+<% end %>

@@ -2,6 +2,7 @@
 
 <table class = "table">
   <tr>
+    <th></th>
     <th><%= t ".name" %></th>
     <th><%= t ".email" %></th>
     <th></th>
@@ -10,16 +11,10 @@
   <% @users.each do |user| %>
 
       <tr>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="col-md-4">
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%=  button_to(t(".show_href"), user_path(user), :class => 'navbar-link') %><td>
-        </div>
-      </div>
-    </div>
-  </tr>
+      </tr>
 
   <% end %>
 

@@ -40,7 +40,6 @@
     <% @userevents = AttendingEvent.where(:user => @user) %>
     <% @userevents.each do |e| %>
 
-
       <tr>
         <div class="row">
           <div class="col-md-9">
@@ -62,6 +61,7 @@
 
     <% end %>
   </table>
+
 
 
 

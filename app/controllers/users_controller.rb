@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Controller for Users class
 class UsersController < ApplicationController
   extend Devise::Models
 
@@ -42,8 +45,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def users
-  end
+  def users; end
 
   def delete
     @user = User.find(params[:post_id])
@@ -52,11 +54,7 @@ class UsersController < ApplicationController
   end
 
   private
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :aboutme, :avatar)
-    end
-
-
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :aboutme, :avatar)
+  end
 end
-
-
