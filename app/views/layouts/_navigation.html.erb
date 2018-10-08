@@ -46,8 +46,8 @@
         <%=  link_to(t("users.show.edit_profile_href"), edit_user_registration_path, :class => 'navbar-link') %> |
         <%=  link_to(t("layouts.application.logout_href"), destroy_user_session_path, method: :delete, :class => 'navbar-link') %>
     <% else %>
-        <li><%=  link_to(t("layouts.application.signup_href"), new_user_registration_path) %></li> |
-        <li><%=  link_to(t("layouts.application.login_href"), new_user_session_path) %></li>
+        <%=  link_to(t("layouts.application.signup_href"), new_user_registration_path, :class => 'navbar-link') %> |
+        <%=  link_to(t("layouts.application.login_href"), new_user_session_path, :class => 'navbar-link') %>
     <% end %>
   </p>
 
