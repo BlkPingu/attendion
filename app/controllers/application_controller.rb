@@ -18,7 +18,6 @@ class ApplicationController < ActionController::Base
                                                password_confirmation
                                                avatar
                                                current_password])
-
   end
 
   private
