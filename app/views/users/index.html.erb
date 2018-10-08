@@ -11,7 +11,6 @@
   <% @users.each do |user| %>
 
       <tr>
-          <td width="20%"><%= image_tag user.avatar.url, width: '10%' if user.avatar.present?%></td>
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%=  button_to(t(".show_href"), user_path(user), :class => 'navbar-link') %><td>
