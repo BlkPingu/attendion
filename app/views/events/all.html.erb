@@ -19,7 +19,7 @@
         <td><%= link_to e.title, event_path(e), :class => 'navbar-link' %></td>
         <td><%= e.date %></td>
         <td>
-          <%=  button_to(t(".join_href"), join_event_path(e), method: :get) %>
+          <%=  link_to(t(".join_href"), join_event_path(e), method: :get) %>
         </td>
       </tr>
 
