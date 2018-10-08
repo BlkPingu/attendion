@@ -34,9 +34,9 @@
         <strong>
           <% if @user == current_user %>
           <%= link_to e.event.title, event_path(e.event), :class => 'navbar-link' %>
+            (<%= e.event.date %>)
           <% end %>
         </strong>
-        (<%= e.event.date %>)
         <% if @user == current_user %>
         <%= button_to 'leave', user_attending_event_path(current_user, e),
                     method: :delete,
