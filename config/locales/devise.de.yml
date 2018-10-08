@@ -21,14 +21,16 @@ de:
       send_instructions: 'Nach wenigen Minuten erhalten Sie eine E-Mail mit den Anweisungen, Ihr Passwort rückzusetzen.'
       updated: 'Ihr Passwort wurde erfolgreich geändert. Jetzt sind Sie angemeldet.'
     confirmations:
-      send_instructions: 'Nach einigen Minuten erhalten Sie eine E-Mail mit den Anweisungen, wie eine Bestätigung von Ihrem Konto erfolgen muss.'
+      send_instructions: 'Nach einigen Minuten erhalten Sie eine E-Mail mit den Anweisungen, wie eine Bestätigung von
+      Ihrem Konto erfolgen muss.'
       confirmed: 'Ihr Konto wurde erfolgreich bestätigt. Jetzt sind Sie angemeldet.'
     registrations:
       signed_up: 'Sie haben sich erfolgreich angemeldet. Sie erhalten die Bestätigung auf Ihre E-Mail, falls aktiviert.'
       updated: 'Sie haben Ihr Konto erfolgreich aktualisiert.'
       destroyed: 'Auf Wiedersehen! Ihr Konto wurde erfolgreich gelöscht. Wir hoffen Sie bald wieder zu sehen.'
     unlocks:
-      send_instructions: 'Nach einigen Minuten erhalten Sie eine E-Mail mit den Anweisungen, wie die Freischaltung von Ihrem Konto erfolgen muss.'
+      send_instructions: 'Nach einigen Minuten erhalten Sie eine E-Mail mit den Anweisungen, wie die Freischaltung von
+      Ihrem Konto erfolgen muss.'
       unlocked: 'Ihr Konto wurde erfolgreich freigeschaltet. Jetzt sind Sie angemeldet.'
     mailer:
       confirmation_instructions:

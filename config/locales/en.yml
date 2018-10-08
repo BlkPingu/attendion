@@ -69,17 +69,21 @@ en:
      create: "Create"
   static_pages:
     privacy:
-      message: "We are the good girls. We are not interested in your data at all: We won't collect it, so we can't sell it either.
-                 We don't even require your real name (or any name at all, although we all agree that it's nice to have one in your
+      message: "We are the good girls. We are not interested in your data at all: We won't collect it, so we can't sell
+      it either.
+                 We don't even require your real name (or any name at all, although we all agree that it's nice to have
+                 one in your
                  profile :) )
-               Why we still require you to sign up? We condemn any kind of trolling and inappropriate content and the only measure
+               Why we still require you to sign up? We condemn any kind of trolling and inappropriate content and the
+               only measure
                which is powerful enough against harassment and bullying is being able to block users from our services.
                If you have any other questions - feel free to approach us on Twitter and we'll get back to you:"
     impressum:
       message: "Attendion was first created in 2018 as a semester project from T. K. and T. G. at"
     help:
       help_message_html: "Need some help? Since we're still brand new, we are still looking for questions to answer
-      in a FAQ-section. If you can think of any - please let us know on Twitter %{href} and we'll see what we can do to help!"
+      in a FAQ-section. If you can think of any - please let us know on Twitter %{href} and we'll see what we can do to
+      help!"
       help_href: "@Attendion"
   users:
     index:
@@ -94,6 +98,7 @@ en:
 
   welcome:
       home:
-        welcome_to_attendion: "Welcome to Attendion, your prefered site for creating and joining events with your friends."
+        welcome_to_attendion: "Welcome to Attendion, your prefered site for creating and joining events with your
+        friends."
         how_are_you: "How are you today"
         add_name: "To make it easier for everyone, why don't you start and add your name to your profile?"
